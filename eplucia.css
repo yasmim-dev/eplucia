@@ -1,0 +1,499 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 80px;
+}
+
+.cabecalho-principal {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  top: 0;
+}
+
+.logo img {
+  max-height: 80px;
+  width: auto;
+  display: block;
+}
+
+.menu-escola {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-escola li a {
+  text-decoration: none;
+  color: #015e15;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.menu-escola li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #015e15;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-escola li a:hover::after {
+  transform: scaleX(1);
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
+
+#inicio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)),url('frenteep.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-conteudo {
+  z-index: 2;
+  color: white;
+  z-index: 2;
+  background: rgba(11, 85, 1, 0.103);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-top: 200px;
+}
+
+.hero-conteudo h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero-conteudo p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+
+#sobrenos {
+  display: block;
+  width: 100%;
+  padding: 100px 20px 20px 20px;
+  background-color: rgba(0, 84, 34, 0.236);
+  scroll-margin-top: 80px;
+  min-height: 80vh;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+
+#sobrenos h1 {
+  text-align: center;
+  font-family: Arial;
+  color: #006400;
+  margin-bottom: 15px;
+  border-bottom: 3px solid rgb(28, 111, 4);
+}
+
+.container-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.caixa-imagem {
+  min-width: 300px;
+  max-width: 450px;
+  flex: 0 0 40%;
+}
+
+.caixa-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.caixa-texto {
+  flex: 0 0 50%;
+  max-width: 600px;
+}
+
+.caixa-texto p {
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+}
+
+.caixa-texto h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  color: #006400;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#cursos {
+  width: 100%;
+  margin: 0 0;
+  background-color: rgba(0, 84, 34, 0.236);
+  padding: 5px 20px 250px 20px;
+  scroll-margin-top: 120px;
+}
+
+#cursos h1 {
+  text-align: center;
+  font-family: Arial;
+  color: #006400;
+  margin-bottom: 15px;
+  border-bottom: 2px solid green;
+}
+
+.container-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+#cursos h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #006400;
+  margin-top: 10px;
+}
+
+#cursos .card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+#cursos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#cursos .card-img-top {
+  height: 140px;
+  object-fit: contain;
+  padding: 15px;
+  background-color: white;
+}
+
+#cursos .card-body {
+  text-align: center;
+  padding: 15px;
+  flex-grow: 1;
+}
+
+#cursos .card-title {
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#cursos .card-text {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #333;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#eventos {
+  width: 100%;
+  margin: 0 0;
+  background-color: rgba(0, 84, 34, 0.236);
+  padding: 5px 20px 20px 20px;
+  scroll-margin-top: 120px;
+}
+
+#eventos h1 {
+  text-align: center;
+  font-family: Arial;
+  color: #006400;
+  margin-bottom: 15px;
+  border-bottom: 3px solid rgb(28, 111, 4);
+}
+
+#eventos .container-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+#eventos .img-card {
+  height: 200px;
+  object-fit: cover;
+}
+
+#eventos .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#eventos .card:hover {
+  transform: scale(1.03);
+}
+
+#eventos .card-title {
+  font-size: 16px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.feedbacks {
+  padding: 20px 20px;
+  background: rgba(0, 84, 34, 0.236);
+  display: flex;
+  justify-content: center;
+}
+
+.feedbacks .card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 20px;
+}
+
+.feedbacks .stars {
+  color: #ff6600;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.feedbacks .card p {
+  font-style: italic;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.feedbacks .card h4 {
+  color: #1f3c88;
+  margin: 0;
+}
+
+.feedbacks .card span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+#contato {
+  text-align: center;
+  padding: 150px 20px 80px 20px;
+  background-color: rgba(0, 84, 34, 0.236);
+}
+
+#contato h1 {
+  color: #006400;
+  margin-bottom: 20px;
+  font-family: Arial;
+}
+
+.titulo {
+  position: relative;
+  font-size: 40px;
+  color: #064d0c;
+  text-align: center;
+}
+
+.titulo::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background: #04fb213f;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.card-contato {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-contato input,
+.card-contato textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.card-contato textarea {
+  resize: none;
+  height: 100px;
+}
+
+.card-contato button {
+  padding: 10px;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-contato button:hover {
+  background-color: #228B22;
+}
+
+.footer {
+  background: linear-gradient(180deg, #12a123, #012f08);
+  color: #fff;
+  padding: 50px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.footer-logo p {
+  font-size: 13px;
+  color: #d2efd4fb;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #f8fbf8eb;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: #edf1eb;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.footer-social a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-social a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
