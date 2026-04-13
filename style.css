@@ -490,17 +490,54 @@ section::before {
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #015e15;
+}
+
 @media (max-width: 768px) {
 
   .cabecalho-principal {
-    flex-direction: column;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  nav {
+    width: 100%;
   }
 
   .menu-escola {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 999;
+  }
+
+  .menu-escola.ativo {
+    display: flex;
+  }
+
+  .menu-escola li {
+    text-align: center;
+    padding: 12px 0;
   }
 
   .hero-conteudo {
@@ -516,8 +553,10 @@ section::before {
     font-size: 1rem;
   }
 
+  /* SOBRE */
   .container-flex {
     flex-direction: column;
+    gap: 20px;
   }
 
   .caixa-imagem,
@@ -530,6 +569,7 @@ section::before {
     font-size: 1rem;
   }
 
+  /* OUTROS */
   #cursos {
     padding-bottom: 100px;
   }
@@ -553,5 +593,11 @@ section::before {
 
   .titulo {
     font-size: 28px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 }
