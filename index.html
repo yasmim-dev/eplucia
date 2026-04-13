@@ -215,5 +215,16 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggle = document.querySelector('.menu-toggle');
+                const menu = document.querySelector('.menu-escola');
+
+                toggle.addEventListener('click', function () {
+                    menu.classList.toggle('ativo');
+                });
+            });
+        </script>
 </body>
 </html>
