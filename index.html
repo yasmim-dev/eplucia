@@ -14,7 +14,7 @@
             <img src="eeeplucia.png" alt="Logo EEEP Lúcia Baltazar Costa">
         </div>
 
-        <button class="menu-toggle">☰</button>
+        <button type="button" class="menu-toggle">☰</button>
         <nav>
             <ul class="menu-escola">
                 <li><a href="#inicio">Início</a></li>
@@ -217,14 +217,18 @@
         </footer>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const toggle = document.querySelector('.menu-toggle');
-                const menu = document.querySelector('.menu-escola');
+            const toggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu-escola');
 
-                toggle.addEventListener('click', function () {
-                    menu.classList.toggle('ativo');
-                });
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.toggle('ativo');
             });
-        </script>
+
+            toggle.addEventListener('touchstart', function (e) {
+                e.preventDefault();
+                menu.classList.toggle('ativo');
+            });
+</script>
 </body>
 </html>

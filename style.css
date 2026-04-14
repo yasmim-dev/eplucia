@@ -513,6 +513,8 @@ section::before {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    background: none;
+    border: none;
   }
 
   nav {
